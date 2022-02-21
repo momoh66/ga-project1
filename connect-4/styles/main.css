@@ -4,6 +4,7 @@
 
 body {
   height: 100vh;
+
   margin: 0;
 }
 h1 {
@@ -11,6 +12,7 @@ h1 {
 }
 .grid-wrapper {
   height: 90vh;
+
   display: flex;
   justify-content: center;
 }

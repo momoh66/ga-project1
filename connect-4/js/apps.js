@@ -1,8 +1,7 @@
 // the grid
 const grid = document.querySelector('.grid');
 console.log(grid);
-const cell = document.createElement('div');
-console.log(cell);
+
 //event listener for the player to pick a positon on the grid
 
 const column = 7;
@@ -33,27 +32,40 @@ for (let i = 35; i <= 41; i++) {
 }
 
 function addCounter(event) {
-  const slotId = event.target.dataset.id;
-  console.log(slotId);
-  if (!cells[slotId].classList.contains('occupied')) {
+  const highestIndex = event.target.dataset.id;
+
+  if (!cells[highestIndex].classList.contains('occupied')) {
+    console.log(highestIndex, 'not occupied');
     if (player === 1) {
-      cells[slotId].classList.add('occupied', 'red-counter');
+      cells[highestIndex].classList.add('occupied', 'red-counter');
       player = 2;
-    } else if (player === 2) {
-      cells[slotId].className = 'blue-counter';
-      cells[slotId].classList.add('occupied', 'blue-counter');
+    } else {
+      cells[highestIndex].classList.add('occupied', 'blue-counter');
       player = 1;
     }
-  } else if (!cells[slotId].classList.contains('occupied')) {
+  } else {
+    console.log(highestIndex, 'occupied');
+    const columnArray = [];
+    // turn columnArray into an array of cell numbers that make up a column
+    for (let i = highestIndex; i > 0; i = i - 7) {
+      if (i - 7 >= 0) {
+        columnArray.push(i - 7);
+      }
+    }
+
+    console.log(columnArray, highestIndex);
+
+    // return the number of the first cell that is not occupied
+    const firstAvailable = columnArray.find((number) => {
+      return !cells[number].classList.contains('occupied');
+    });
+
     if (player === 1) {
-      cells[slotId - 7].classList.add('red-counter');
-      cells[slotId].classList.add('occupied');
+      cells[firstAvailable].classList.add('occupied', 'red-counter');
       player = 2;
-    } else if (player === 2) {
-      cells[slotId - 7].classList.add('blue-counter');
-      cells[slotId].classList.add('occupied');
+    } else {
+      cells[firstAvailable].classList.add('occupied', 'blue-counter');
       player = 1;
     }
   }
 }
-console.log(player);
