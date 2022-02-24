@@ -4,23 +4,47 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200&family=Syne+Tactile&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./styles/main.css" />
     <title>Document</title>
   </head>
   <body>
     <h1>Connect 4</h1>
     <div class="grid-wrapper">
+     
+      <div class="button">
+        <button></button><button></button><button></button><button></button
+        ><button></button><button></button><button></button>
+      </div>
       <div class="grid"></div>
     </div>
     <hr />
-    <div class="results">Player <span></span> wins</div>
+    <div class="results">
+      READY TO START:RED PLAYER'S TURN <br> <span>Place mouse over the top of the board to pick a slot</span>
+    </div>
     <hr />
     <div class="button-wrapper">
-      <button>2 player mode</button>
-      <button>computer mode</button>
-      <button>Reset</button>
+      <button class="2-player">2 player mode</button>
+      <button class="computer-button" >computer mode </button>
+      <button class="reset">Restart Game</button> 
     </div>
-
+    <hr />
+    <footer>
+      <div class="cr">
+        &copy; Copyright 2022
+        
+      </div>
+      <div class="name">Created By Mohamed Mohamed</div>
+      <div><a href="https://www.linkedin.com/in/mohamed-mohamed-2bb355115/" target="_blank">
+        <img class="linkedin-logo" src="./assets/linkedin-logo.png" alt="linkedin" >
+      </a>
+</i></div>
+    </footer>
     <script src="./js/apps.js"></script>
   </body>
 </html>
