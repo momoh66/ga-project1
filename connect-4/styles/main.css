@@ -115,13 +115,13 @@ span {
   color: red;
   font-weight: bolder;
 }
-button.computer-button {
+button.coming-soon {
   transition: 0.05s;
 }
-button.computer-button:hover {
+button.coming-soon:hover {
   font-size: 0;
 }
-button.computer-button:hover:after {
+button.coming-soon:hover:after {
   content: 'coming soon!';
   font-size: 20px;
   color: red;

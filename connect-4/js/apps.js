@@ -3,7 +3,6 @@ const grid = document.querySelector('.grid');
 const result = document.querySelector('.results');
 const reset = document.querySelector('button.reset');
 const selectionButton = document.querySelectorAll('div .button button');
-const twoPlayer = document.querySelector('.2-player');
 const column = 7;
 const row = 6;
 const gridCellCount = row * column;
@@ -227,10 +226,6 @@ function addCounter(event) {
   }
 }
 
-for (let i = 0; i < 42; i++) {
-  const slots = cells[i];
-}
-functi;
 //! Reset button
 
 reset.addEventListener('click', resetEverything);
@@ -243,11 +238,4 @@ function resetEverything() {
   for (let i = 0; i < 7; i++) {
     selectionButton[i].disabled = false;
   }
-}
-//! Two - player
-
-twoPlayer.addEventListener('click', twoPlayerMode);
-
-function twoPlayerMode() {
-  addCounter();
 }

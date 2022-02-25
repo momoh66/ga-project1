@@ -44,4 +44,4 @@ Although this project was very challenging. I have consolidated knowledge of man
 - use of flexbox
 - use of wide range of element types in HTMl
 
-Given the length of the project I also picked key skills in time management along with the importance of using psedocode to code thoroughly.
+Given the length of the project I also picked up key skills in time management along with the importance of using psedocode to code thoroughly.
