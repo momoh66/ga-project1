@@ -2,6 +2,9 @@
 
 #### By Mohamed Mohamed
 
+https://momoh66.github.io/ga-project1/
+
+
 ## Overview
 
 This is Project 1 of my GA software engineering immersive course. The goals are to create a fully functioning game with logic in order to output a winner. This ought to be illustrated with key skills from HTML, CSS and JS.
